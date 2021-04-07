@@ -13,7 +13,10 @@ const connect = () => {
 
   client.on('connect', () => {
     console.log("You're now connected to the Server!");
+    client.write("Name: ALV");
   })
+
+
 
   return client;
 }
