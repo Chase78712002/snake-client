@@ -20,6 +20,7 @@ const setupInput = (client) =>{
       case "s": connection.write("Move: down"); break;
       case "a": connection.write("Move: left"); break;
       case "d": connection.write("Move: right"); break;
+      case "p": connection.write("Say: My anaconda don't"); break;
     }
   })
   return stdin;
