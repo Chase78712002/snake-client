@@ -1,8 +1,9 @@
 const net = require('net');
+const {IP, PORT} = require('./constants');
 const connect = () => {
   const client = net.createConnection({
-    host: "135.23.222.131",
-    port: 50542
+    host: IP,
+    port: PORT
   });
 
   client.setEncoding('utf8');
@@ -17,23 +18,21 @@ const connect = () => {
   })
 
   // Hard coded moving commands===============
-  // client.on('connect', () => {
-  //   let time = 0;
-  //   // while(time < 5000) {
-  //   //   setTimeout(() => {
-  //   //     client.write("Move: up");
-  //   //   }, time);
-  //   //   time += 50;
-  //   // let moveLeftInterval = setInterval(() => {
-  //   //   client.write("Move: left");
-  //   //   time += 500;
-  //   //   if (time === 5000) {
-  //   //     clearInterval(moveLeftInterval);
-  //   //   }
-  //   // }, 500);
-  // })
-
-
+    // client.on('connect', () => {
+    //   let time = 0;
+    //   // while(time < 5000) {
+    //   //   setTimeout(() => {
+    //   //     client.write("Move: up");
+    //   //   }, time);
+    //   //   time += 50;
+    //   // let moveLeftInterval = setInterval(() => {
+    //   //   client.write("Move: left");
+    //   //   time += 500;
+    //   //   if (time === 5000) {
+    //   //     clearInterval(moveLeftInterval);
+    //   //   }
+    //   // }, 500);
+    // })
   return client;
 }
 
